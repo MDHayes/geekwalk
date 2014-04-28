@@ -78,10 +78,10 @@ def walk_data(csv_file)
   attractions = walk[:attractions]
   route = []
   attractions.each_with_index do |attraction, index|
-    previous_attraction = attractions[index]
+    previous_attraction = attractions[index - 1]
     next_leg = router.route(previous_attraction, attraction)
     p "Leg has #{next_leg.length} points"
-    route += next_leg unless next_leg.length < 3
+    route += next_leg
   end
   p "Overal route is #{route.length} points long"
 

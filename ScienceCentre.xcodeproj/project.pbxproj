@@ -10,7 +10,7 @@
 		5A41643610705AEF5960ACE9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A416A373437C45A5C5242EB /* main.m */; };
 		5A416B069DDB6ECB8F49124E /* GWAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A416589F743DFF029656C61 /* GWAppDelegate.m */; };
 		5A416F446004523F8ED9B051 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5A416289AB6453B2DED0D71A /* InfoPlist.strings */; };
-		6E73F21E190E614F00641B8D /* Walks.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6E73F21D190E614F00641B8D /* Walks.plist */; };
+		6E73F228190E9FCC00641B8D /* Walks.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6E73F227190E9FCC00641B8D /* Walks.plist */; };
 		830A4F7318EC5C9100277227 /* GWAttractionDetailsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 830A4F7218EC5C9100277227 /* GWAttractionDetailsView.xib */; };
 		8331AE9918D863CC00403771 /* GWWalksView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8331AE9818D863CC00403771 /* GWWalksView.m */; };
 		8331AE9C18D8665700403771 /* GWWalkViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8331AE9B18D8665700403771 /* GWWalkViewModel.m */; };
@@ -63,7 +63,7 @@
 		5A4169BFDDBC52FCC9F8F974 /* GWAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GWAppDelegate.h; sourceTree = "<group>"; };
 		5A416A373437C45A5C5242EB /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5A416BD9C983B4EE71B21F24 /* en */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = en; path = GlasgowWalking/en.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
-		6E73F21D190E614F00641B8D /* Walks.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Walks.plist; path = "../../../../../../../../Dropbox/Future City Project/Walking App/Data/csv/Walks.plist"; sourceTree = "<group>"; };
+		6E73F227190E9FCC00641B8D /* Walks.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Walks.plist; sourceTree = "<group>"; };
 		830A4F7218EC5C9100277227 /* GWAttractionDetailsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GWAttractionDetailsView.xib; sourceTree = "<group>"; };
 		8331AE9718D863CC00403771 /* GWWalksView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GWWalksView.h; sourceTree = "<group>"; };
 		8331AE9818D863CC00403771 /* GWWalksView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GWWalksView.m; sourceTree = "<group>"; };
@@ -207,9 +207,9 @@
 		5A416B74A40221D64A464C75 /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				6E73F227190E9FCC00641B8D /* Walks.plist */,
 				5A416289AB6453B2DED0D71A /* InfoPlist.strings */,
 				5A416A373437C45A5C5242EB /* main.m */,
-				6E73F21D190E614F00641B8D /* Walks.plist */,
 				5A4165700437A7987CEA5A7C /* ScienceCentre-Prefix.pch */,
 				5A4166B6132D482A41A5C82B /* ScienceCentre-Info.plist */,
 			);
@@ -441,9 +441,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				830A4F7318EC5C9100277227 /* GWAttractionDetailsView.xib in Resources */,
-				6E73F21E190E614F00641B8D /* Walks.plist in Resources */,
 				83FEBEFC18D750FA00B2E05F /* Images.xcassets in Resources */,
 				5A416F446004523F8ED9B051 /* InfoPlist.strings in Resources */,
+				6E73F228190E9FCC00641B8D /* Walks.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -593,7 +593,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
+				SDKROOT = iphoneos7.1;
 			};
 			name = Debug;
 		};
@@ -624,7 +624,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				SDKROOT = iphoneos;
+				SDKROOT = iphoneos7.1;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

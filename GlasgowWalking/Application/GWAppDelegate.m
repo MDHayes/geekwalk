@@ -49,7 +49,7 @@
     NSDate *dataUpdatedDate = [attributes fileModificationDate];
     NSInteger dataUpdatedTimestamp = [dataUpdatedDate timeIntervalSince1970];
 
-    if (YES || lastLoadedTimestamp < dataUpdatedTimestamp) {
+    if (lastLoadedTimestamp < dataUpdatedTimestamp) {
         [self preloadWalks];
         [[NSUserDefaults standardUserDefaults] setInteger:dataUpdatedTimestamp forKey:loadedKey];
         [[NSUserDefaults standardUserDefaults] synchronize];

@@ -1,18 +1,22 @@
 require 'httparty'
+require 'polylines'
 
-class MapQuest
+class GoogleDirections
   include HTTParty
-  base_uri 'www.mapquestapi.com'
+  base_uri 'https://maps.googleapis.com/maps/api'
 
   def initialize
-    @options = { :key => "Fmjtd%7Cluur2q0r2d%2C20%3Do5-9aaw1z", routeType: 'pedestrian'}
-    # Fmjtd%257Cluur2q0r2d%252C20%253Do5-9aaw1z
+    @options = {
+      key: "AIzaSyC11jATkVy3rCtRhdXR_PuQ_8McefP96ts",
+      sensor: 'false',
+      mode: 'walking'
+    }
   end
 
   def directions(from, to, opts={})
     opts.merge!({
-      from: from,
-      to: to
+      origin: from,
+      destination: to
     })
     opts.merge!(@options)
 
@@ -20,32 +24,39 @@ class MapQuest
     opts.each do |key, value|
       query += "&#{key}=#{value}"
     end
-    response = self.class.get("/directions/v2/route?#{query}")
+    response = self.class.get("/directions/json?#{query}")
+    p response.request.last_uri.to_s
     response
   end
 end
 
+
 class Router
-  attr_accessor :mapquest
+  attr_accessor :api
 
   def initialize
-    @mapquest = MapQuest.new
+    @api = GoogleDirections.new
   end
 
   def route(from, to)
-    directions = mapquest.directions("#{from[:lat]},#{from[:long]}", "#{to[:lat]},#{to[:long]}")
-    route = directions['route']
-    return unless route['legs']
+    directions = @api.directions("#{from[:lat]},#{from[:long]}", "#{to[:lat]},#{to[:long]}")
+    routes = directions['routes']
+    route = routes.first
+    return unless route
     points = []
     legs = route['legs']
     legs.each do |leg|
-      maneuvers = leg['maneuvers']
-      next unless maneuvers
-      points += maneuvers.map do |maneuver|
-        {
-          lat: maneuver['startPoint']['lat'],
-          long: maneuver['startPoint']['lng']
-        }
+      steps = leg['steps']
+      next unless steps
+      steps.each_with_index do |step, index|
+        polyline = step['polyline']['points']
+        decoded_poly = Polylines::Decoder.decode_polyline(polyline)
+        points += decoded_poly.map do |coord|
+          {
+            lat: coord.first,
+            long: coord.last
+          }
+        end
       end
     end
 
