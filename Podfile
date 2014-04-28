@@ -1,0 +1,10 @@
+platform :ios, '7.1'
+
+pod 'ReactiveCocoa', '~> 2.2'
+pod 'ReactiveViewModel', '~> 0.2'
+pod 'libextobjc', '~> 0.4'
+pod 'UIView+AutoLayout', '~> 1.3.0'
+pod 'MagicalRecord', '~> 2.2'
+pod 'HockeySDK', '~> 3.5'
+pod 'FlurrySDK', '~> 4.3'
+pod 'Touchpose', '~> 1.0'

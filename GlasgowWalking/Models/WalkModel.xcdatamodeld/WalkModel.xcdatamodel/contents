@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="5064" systemVersion="13C64" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Attraction" representedClassName="Attraction" syncable="YES">
+        <attribute name="details" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="entryDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="image" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lat" optional="YES" attributeType="Double" defaultValueString="0" syncable="YES"/>
+        <attribute name="lng" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="openingTimes" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="typeImage" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="walk" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Walk" inverseName="attractions" inverseEntity="Walk" syncable="YES"/>
+    </entity>
+    <entity name="RoutePoint" representedClassName="RoutePoint" syncable="YES">
+        <attribute name="lat" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="lng" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <relationship name="walk" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Walk" inverseName="points" inverseEntity="Walk" syncable="YES"/>
+    </entity>
+    <entity name="Walk" representedClassName="Walk" syncable="YES">
+        <attribute name="details" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="distanceKm" optional="YES" attributeType="Double" defaultValueString="0" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="overviewImage" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="providerImage" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="attractions" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Attraction" inverseName="walk" inverseEntity="Attraction" syncable="YES"/>
+        <relationship name="points" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="RoutePoint" inverseName="walk" inverseEntity="RoutePoint" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Attraction" positionX="-54" positionY="27" width="128" height="178"/>
+        <element name="Walk" positionX="-342" positionY="81" width="128" height="148"/>
+        <element name="RoutePoint" positionX="-342" positionY="281" width="128" height="88"/>
+    </elements>
+</model>
