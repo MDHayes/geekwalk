@@ -10,6 +10,7 @@
 		5A41643610705AEF5960ACE9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A416A373437C45A5C5242EB /* main.m */; };
 		5A416B069DDB6ECB8F49124E /* GWAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A416589F743DFF029656C61 /* GWAppDelegate.m */; };
 		5A416F446004523F8ED9B051 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5A416289AB6453B2DED0D71A /* InfoPlist.strings */; };
+		6E73F21E190E614F00641B8D /* Walks.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6E73F21D190E614F00641B8D /* Walks.plist */; };
 		830A4F7318EC5C9100277227 /* GWAttractionDetailsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 830A4F7218EC5C9100277227 /* GWAttractionDetailsView.xib */; };
 		8331AE9918D863CC00403771 /* GWWalksView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8331AE9818D863CC00403771 /* GWWalksView.m */; };
 		8331AE9C18D8665700403771 /* GWWalkViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8331AE9B18D8665700403771 /* GWWalkViewModel.m */; };
@@ -27,7 +28,6 @@
 		83C42F5618D9FBD7005DE7A4 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83C42F5518D9FBD7005DE7A4 /* MapKit.framework */; };
 		83D3E7C318E320FD00161CB8 /* GWWalkMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D3E7C218E320FD00161CB8 /* GWWalkMapViewController.m */; };
 		83D3E7C618E3211A00161CB8 /* GWWalkMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D3E7C518E3211A00161CB8 /* GWWalkMapView.m */; };
-		83D54B2F18EAB7D900BBDBD5 /* Walks.plist in Resources */ = {isa = PBXBuildFile; fileRef = 83D54B2E18EAB7D900BBDBD5 /* Walks.plist */; };
 		83E3767D18DB008D005AA295 /* GWWalkOverviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83E3767C18DB008D005AA295 /* GWWalkOverviewView.m */; };
 		83E3768018DB64EC005AA295 /* GWAttractionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 83E3767F18DB64EC005AA295 /* GWAttractionCell.m */; };
 		83E3768418DB6528005AA295 /* GWAttractionViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 83E3768318DB6528005AA295 /* GWAttractionViewModel.m */; };
@@ -63,6 +63,7 @@
 		5A4169BFDDBC52FCC9F8F974 /* GWAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GWAppDelegate.h; sourceTree = "<group>"; };
 		5A416A373437C45A5C5242EB /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5A416BD9C983B4EE71B21F24 /* en */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = en; path = GlasgowWalking/en.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
+		6E73F21D190E614F00641B8D /* Walks.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Walks.plist; path = "../../../../../../../../Dropbox/Future City Project/Walking App/Data/csv/Walks.plist"; sourceTree = "<group>"; };
 		830A4F7218EC5C9100277227 /* GWAttractionDetailsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GWAttractionDetailsView.xib; sourceTree = "<group>"; };
 		8331AE9718D863CC00403771 /* GWWalksView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GWWalksView.h; sourceTree = "<group>"; };
 		8331AE9818D863CC00403771 /* GWWalksView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GWWalksView.m; sourceTree = "<group>"; };
@@ -94,7 +95,6 @@
 		83D3E7C218E320FD00161CB8 /* GWWalkMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GWWalkMapViewController.m; sourceTree = "<group>"; };
 		83D3E7C418E3211A00161CB8 /* GWWalkMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GWWalkMapView.h; sourceTree = "<group>"; };
 		83D3E7C518E3211A00161CB8 /* GWWalkMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GWWalkMapView.m; sourceTree = "<group>"; };
-		83D54B2E18EAB7D900BBDBD5 /* Walks.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Walks.plist; sourceTree = "<group>"; };
 		83E3767B18DB008D005AA295 /* GWWalkOverviewView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GWWalkOverviewView.h; path = ../Library/GWWalkOverviewView.h; sourceTree = "<group>"; };
 		83E3767C18DB008D005AA295 /* GWWalkOverviewView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GWWalkOverviewView.m; path = ../Library/GWWalkOverviewView.m; sourceTree = "<group>"; };
 		83E3767E18DB64EC005AA295 /* GWAttractionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GWAttractionCell.h; sourceTree = "<group>"; };
@@ -209,9 +209,9 @@
 			children = (
 				5A416289AB6453B2DED0D71A /* InfoPlist.strings */,
 				5A416A373437C45A5C5242EB /* main.m */,
+				6E73F21D190E614F00641B8D /* Walks.plist */,
 				5A4165700437A7987CEA5A7C /* ScienceCentre-Prefix.pch */,
 				5A4166B6132D482A41A5C82B /* ScienceCentre-Info.plist */,
-				83D54B2E18EAB7D900BBDBD5 /* Walks.plist */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -441,8 +441,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				830A4F7318EC5C9100277227 /* GWAttractionDetailsView.xib in Resources */,
+				6E73F21E190E614F00641B8D /* Walks.plist in Resources */,
 				83FEBEFC18D750FA00B2E05F /* Images.xcassets in Resources */,
-				83D54B2F18EAB7D900BBDBD5 /* Walks.plist in Resources */,
 				5A416F446004523F8ED9B051 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

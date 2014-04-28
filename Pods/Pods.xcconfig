@@ -1,0 +1,7 @@
+FRAMEWORK_SEARCH_PATHS = "$(PODS_ROOT)/HockeySDK/Vendor"
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1 $(inherited) BITHOCKEY_VERSION="@\"3.5.5\"" BITHOCKEY_C_VERSION="\"3.5.5\"" BITHOCKEY_BUILD="@\"28\"" BITHOCKEY_C_BUILD="\"28\""
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers" "${PODS_ROOT}/Headers/FlurrySDK" "${PODS_ROOT}/Headers/HockeySDK" "${PODS_ROOT}/Headers/MagicalRecord" "${PODS_ROOT}/Headers/ReactiveCocoa" "${PODS_ROOT}/Headers/ReactiveCocoa/ReactiveCocoa" "${PODS_ROOT}/Headers/ReactiveViewModel" "${PODS_ROOT}/Headers/Touchpose" "${PODS_ROOT}/Headers/UIView+AutoLayout" "${PODS_ROOT}/Headers/libextobjc"
+LIBRARY_SEARCH_PATHS = "$(PODS_ROOT)/FlurrySDK/Flurry"
+OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers" -isystem "${PODS_ROOT}/Headers/FlurrySDK" -isystem "${PODS_ROOT}/Headers/HockeySDK" -isystem "${PODS_ROOT}/Headers/MagicalRecord" -isystem "${PODS_ROOT}/Headers/ReactiveCocoa" -isystem "${PODS_ROOT}/Headers/ReactiveCocoa/ReactiveCocoa" -isystem "${PODS_ROOT}/Headers/ReactiveViewModel" -isystem "${PODS_ROOT}/Headers/Touchpose" -isystem "${PODS_ROOT}/Headers/UIView+AutoLayout" -isystem "${PODS_ROOT}/Headers/libextobjc"
+OTHER_LDFLAGS = -ObjC -lFlurry_4.4.0 -framework CoreData -framework CoreGraphics -framework CoreText -framework CrashReporter -framework QuartzCore -framework Security -framework SystemConfiguration -framework UIKit
+PODS_ROOT = ${SRCROOT}/Pods
